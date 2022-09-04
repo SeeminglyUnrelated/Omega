@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <link rel="stylesheet" href="guide.css" />
+   <script src="guide.js"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+   <title>Omega Guide</title>
+ </head>
+ <body onkeydown ="openNav(event)">
+   <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="btn" onclick="closeNav()">&#937</a>
+  <a href="#title">Home</a>
+  	<a href="#setup">Setup</a>
+  	<div class="popup" onmouseover ='popup("basic_popup")' onmouseout='popup("basic_popup")'>
+  		<a href="#basic">Basic</a>
+  		<span class= "popuptext" id="basic_popup">
+  			<a href="#wrt">wrt()</a><br>
+  			<a href="#ints">Integers and Strings</a>
+  			<a href="#arithmetic">Arithmetic</a>
+  			<a href="#lists">Lists</a>
+  			<a href="#variables">Variables</a>
+  			<a href="#conditions">Conditions</a>
+  		</span>
+	</div>
+	<div class="popup" onmouseover ='popup("advanced_popup")' onmouseout='popup("advanced_popup")'>
+  		<a href="#advanced">Advanced</a>
+  		<span class="popuptext" id="advanced_popup">
+  			<a href="#functions">Functions</a>
+  		</span>
+  	</div>
+</div>
+
+<a href="javascript:void(0)" class="btn"> <span onclick="openNav()" id="NavOpen">&#937</span></a>
+
+<div id="main">
+	<div id="NavBar" class="NavBar">
+		<a href="mainSite.html">Home</a>
+		<a href="downloads.html">Downloads</a>
+		<a href="guide.html">Guide</a>
+		<a href="cheat.html">Cheat Sheet</a>
+	</div>
+	<div id="title">
+		<H1>Omega Guide And Documentation &#937</H1>
+		<h2>Welcome! This is the official documentation.</h2>
+		<h3>You can skip to parts of this document by opening the sidebar with the button at the top left.</h3>
+		<h4>Note that you need <a href="https://python.org">Python</a> installed on your computer for Omega to work</h4>
+		<hr>
+	</div>
+	<div class="sections">
+		<div id="setup">
+			<h2>Setup</h2>
+			<h3>Using the shell</h3>
+			<p>To open the shell, simply double-click on Shell.py in the Omega Language folder.<br>
+			This will open up the shell, which is used to write single-use-single-line code</p>
+			<h3>Working with files</h3>
+			<p>The Tau IDE (Integrated Developement Envirement) comes pre-installed with Omega.<br>
+				To use it, double-click on Tau.py.<br>
+				Inside Tau, you can write Omega or python code, save it, and run it.<br>
+				If a console window does not pop up, raise it to the top<br>
+				Do not close this window. Tau is tied to the console and if you remove it Tau will shut down<br>
+				We will be using files in Tau in the rest of this tutorial.<br>
+			</p>
+		</div>
+		<div id="basic">
+			<h2>Basic Concepts</h2>
+			<h3 id="wrt">wrt()</h3>
+			<p>wrt() is used to print text onto the console.<br><br>
+
+				Example: <br>
+				<code-block>
+				wrt("Hello World")
+				</code-block><br>
+				<code-block>
+				>>> Hello World
+				</code-block><br><br>
+				<code-tip>You can also pass in variables to wrt(), which we will learn about later</code-tip>
+			</p>
+			<h3 id="ints">Ints and Strings</h3>
+			<p>
+				There are a total of 6 data types in omega, <br>
+				the most basic ones being integers (numbers), floats (decimals)<br> 
+				and strings (a bunch of letters).<br><br>
+
+				The strings look like this:<br>
+				<code-block>"A bunch of text"</code-block><br>
+				And are used to "string" characters (letters) together.<br><br>
+				Integers on the other hand are any collection of non decimal (1.1111) numbers (negative or positive).<br>
+				Note that "5" is considered a string and 5 is considered an integer.<br><br>
+				Floats are Integers with decimals, like so:<br>
+				<code-block>-5.55</code-block><br><br>
+			</p>
+			<h3 id="arithmetic">Basic Arithmetic</h3>
+			<p>
+				You can perform basic arithmetic on integers like so:<br>
+				<code-block> <i>number</i> <b><i>Operator</i></b> <i>number</i> </code-block><br>		
+			</p>
+			<table>
+				<tr>
+					<th>Operation Symbol</th>
+					<th>Meaning</th>
+				</tr>
+				<tr>
+					<td>+</td>
+					<td>Addition</td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td>Substraction</td>
+				</tr>
+				<tr>
+					<td>*</td>
+					<td>Multiplication</td>
+				</tr>
+				<tr>
+					<td>/</td>
+					<td>Division</td>
+				</tr>
+				<tr>
+					<td>^ or **</td>
+					<td>exponentation (power of)</td>
+				</tr>
+			</table>
+
+			<h3 id="lists">Lists</h3>
+			<p>
+				Lists are simply some data in packed together.<br>
+				Lists look like this:<br>
+				<i>A list of numbers</i><br>
+				<code-block>
+					[1, 2, 3, 4, 5, 6]
+				</code-block><br><br>
+
+				You can also have a list of lists if you want.<br>
+				You can mix data types inside of lists:<br>
+				For example:<br>
+				<code-block>
+					[1, "hi", 2, "hello", 3, [1, 2, 3]]
+				</code-block><br><br>
+
+				To get a value from a list simply do:<br>
+				<code-block>
+					>>> <i>list</i> < <i>index</i>
+				</code-block><br><br>
+
+				<code-tip>Note that the index starts from 0 and not 1.</code-tip><br><br>
+				Example (to get first element of a list):<br>
+				<code-block> 
+				[1, 2, 3, 4] < 0
+				</code-block><br>
+				<code-block>
+				>>> 1 
+				</code-block><br>
+			</p>
+			<h3 id="variables">Variables</h3>
+			<p>
+				Variables are used to store data.<br>
+				They are declared in the following way:<br>
+				<code-block>var <i>name</i> = <i>value</i></code-block><br>
+				The value can be of any of the 6 data types: Int, Float, String, List, Function, and BuiltinFunction.<br><br>
+				To change the value of a variable simply do like so (using the operator you wish):<br>
+				<code-block>
+					var a = 1<br>
+					var a = a + 1<br>
+					wrt(a)
+				</code-block><br><br>
+
+				<code-block> >>> 2 </code-block><br>
+			</p>
+			<h3 id="conditions">Conditions</h3>
+			<p>
+				Conditions are used to run a piece of code only if a condition is or is not true.<br>
+				We can do this in Omega with the if/elif/else statements.<br>
+				if is used in the following way:<br>
+				<code-block>
+					if <i>data</i> <b><i>comparison</i></b> <i>data</i> {<br>
+						&emsp;wrt("hi")<br>
+					}<br>
+				</code-block><br><br>
+				For example:<br>
+				<code-block>
+					if 5 >= 4 {<br>
+						&emsp;wrt("It works!")<br>
+					}
+				</code-block><br>
+
+
+				<code-block> >>> It works! </code-block><br><br>
+				<code-tip>Tip: You can use variables instead of numbers</code-tip><br>
+				<table>
+					<tr>
+						<th>Combarison Symbol</th>
+						<th>Meaning</th>
+					</tr>
+					<tr>
+						<td>==</td>
+						<td>Is equals</td>
+					</tr>
+					<tr>
+						<td>!=</td>
+						<td>Is not equals</td>
+					</tr>
+					<tr>
+						<td><</td>
+						<td>Is less than</td>
+					</tr>
+					<tr>
+						<td>></td>
+						<td>Is greater than</td>
+					</tr>
+					<tr>
+						<td><=</td>
+						<td>Is less than or equal to</td>
+					</tr>
+					<tr>
+						<td>>=</td>
+						<td>Is more than or equal to</td>
+					</tr>
+				</table><br>
+				Each of these will return either true or false, depending on the data on either side.<br><br>
+
+				The elif statement is run when the first if statement is false, <br>
+				and the condition in the elif is true.<br>
+				Example:<br>
+				<code-block> 
+					if 5 >= 6 {<br>
+						&emsp;wrt("This will never run")<br>
+					}<br>
+					elif 5 != 4 {<br>
+						&emsp;wrt("This will run!")<br>
+					}<br>
+				</code-block><br><br>
+				<code-block>
+					>>> This will run!
+				</code-block><br><br>
+				<code-tip>
+				You can use as many elifs as you want. You can also put ifs inside ifs.<br><br>
+				This is called nesting, though it's generally not a very good idea for readability purposes.
+				</code-tip><br><br>
+				Finally, we have the else statement<br>
+				The else statement runs if all the other statements (the if and the optional elifs) don't run.<br>
+				Example:<br>
+				<code-block>
+					if 5 >= 6 {<br>
+						&emsp;wrt("This will never run")<br>
+					}<br>
+					elif 5 != 4 {<br>
+						&emsp;wrt("This will run!")<br>
+					}<br>
+					else {<br>
+						&emsp;wrt("Math is broken")<br>
+					}</code-block><br><br>
+				<code-block> >>> This will run! </code-block>
+			</p>
+		</div>
+		<div id="advanced">
+			<h2>Advanced Concepts</h2>
+			<h3 id="functions">Functions</h3>
+				<p>Functions are used to define a block of code to be run later on.<br>
+				They are declared in the following way:<br>
+				<code-block>
+					def <i>function_name</i> (<i>optional arguments to take in</i>) {<br>
+						&emsp;<i>code to be run</i><br>
+					}
+				</code-block><br><br>
+
+				To call them (or run them), do like so:<br>
+				<code-block>
+					<i>function name</i>(<i>optional arguments to pass</i>)
+				</code-block><br><br>
+
+				Let's first focus on functions without arguments.<br>
+				For example, say we have a function that says hello:<br>
+				<code-block>
+					def sayHi(){
+						&emsp;wrt("Hello!")
+					}
+				</code-block><br><br>
+
+				And then we can call it as many times as we want:<br>
+				<code-block>
+					sayHi()<br>
+					sayHi()<br>
+					sayHi()<br>
+
+					 >>> Hello!<br>
+					 >>> Hello!<br>
+					 >>> Hello!<br>
+				</code-block><br><br>
+
+				But say we wanted to add one to a specific number<br>
+				To do this we could use a function with parameters or arguments<br><br>
+				To code this function we would do something like this:<br>
+				<code-block>
+					def addOne(number) {<br>
+						&emsp;wrt(number + 1)<br>
+					}<br><br>
+
+					addOne(5)<br><br>
+
+					 >>> 6<br>
+				</code-block><br>
+
+				So number is the unknown variable the function is expecting you to pass, so it can add one to it.<br><br>
+				<code-tip>You can have as many arguments as you want in a function. Just make sure to pass them all in when you call it!</code-tip>
+				</p>
+			<h3 id="program">A simple program</h3>
+				<p>
+					Using what we've learnt so far, let's make a simple program to calculate<br>
+					the fibonacci sequence<br><br>
+
+					If you don't know what the fibonacci sequence is, this is an example:<br><br>
+					<code-block>
+						First 8 numbers of the sequence<br>
+						0, 1, 1, 2, 3, 5, 8, 13<br>
+					</code-block>
+					As you can see, the next number is determined by the addition of the last two.<br>
+				</p>
+			<h3>Types</h3>
+			<h3>Conditions</h3>
+		</div>
+	</div>
+</div>
+ </body>
+</html>

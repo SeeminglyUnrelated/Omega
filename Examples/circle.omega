@@ -1,0 +1,7 @@
+wrt("Enter a radius")
+var r = float(input())
+var area = pi * r * r
+wrt("The area of this circle is: " + str(area))
+
+
+

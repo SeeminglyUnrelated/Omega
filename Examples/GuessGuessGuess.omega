@@ -1,0 +1,22 @@
+# Get a random integer for comp play
+var comp = randomint(1, 10)
+wrt("I'm thinking of a number from 1 to 10, guess my number")
+
+
+for i = 0 to 3{
+	var player = int(input())
+	if player == comp {
+		wrt("You won!")
+		var won = true
+		break
+	}
+	else {
+		wrt("Nope, ")
+		wrt("You have: " + str(2-i) + " tries left")
+		var won = false
+	}
+}
+
+if won != true{
+	wrt("The number was: " + str(comp))
+}

@@ -1,0 +1,24 @@
+def fib(n){
+	var a = 0
+	var b = 1
+	while a < n{
+		wrt(a)
+		var a = b
+ 		var b = a+b
+	}
+	wrt(" ")
+}
+
+var on = true
+while on == true {
+	wrt("Fibonnacci sequence, enter any number or exit to exit")
+	var in = input()
+	if in == "exit" {
+		break
+	}
+	else {
+		var hi = int(in)
+		fib(hi)
+	}
+}
+

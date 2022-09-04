@@ -1,0 +1,57 @@
+# Comments look like this 
+
+var a = 1 # Variable assignation like so 
+var b = a+1 
+
+wrt(a++) # Write to console
+
+# This code can also be written like this:
+var a = 1; var b = a + 1; wrt(a++) 
+# Semicolons are optional
+
+# Functions are written like so
+#(def)  name   arg
+def sayHello(name) {
+	wrt("Hello"+name)
+}
+
+# Compact version just for fun
+def sayHello(name){ wrt("Hello"+name) }
+
+# And classes like so:
+class person
+{
+	def person # Initialization
+	{
+		person.hi = "Hello World"
+	}
+	def setName(name)
+	{
+		person.name = name
+	}
+}
+
+
+#    Name||Parent
+class Paul(person)
+{
+	def Paul
+	{
+		Paul.hi = "Hi" # This overwrites parent code
+		Paul.name = "Paul"
+	}
+}
+
+
+# If else logic
+var c = 1
+var d = 2
+if c + d == 3 and c == 2 or d == 2 {
+	wrt(d)
+}
+elif c + d == 4 {
+	wrt(c)
+}
+else {
+	wrt(5)
+}

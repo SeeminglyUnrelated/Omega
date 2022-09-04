@@ -1,0 +1,25 @@
+var comp = randomint(0, 2)
+
+var player = 0
+
+wrt("Rock = 0, Paper = 1, Scissors = 2?")
+var player = int(input())
+
+if player == comp {
+	wrt("Tie")
+elif player == 0 {
+	if comp == 1 {
+		wrt("You Lose! Paper covers Rock")
+	else wrt("You win! Rock smashes Scissors")
+elif player == 1 {
+	if comp == 2 { 
+		wrt("You Lose! Scissors cut Paper")
+	else wrt("You win! Paper covers Rock")
+elif player == 2 {
+	if comp == 0 {
+		wrt("You Lose! Rock smashes Scissors")
+	else wrt("You win! Scissors cut paper")
+
+
+
+

@@ -1,0 +1,58 @@
+# Test Variables
+var num= 5
+var string = "Hello World"
+var bool = true
+var list = [num, string, bool]
+
+wrt(num)
+wrt(string)
+wrt(bool)
+wrt(list)
+
+# Test functions
+def add(a, b) {
+var sum = a + b
+wrt(sum)
+}
+
+var hi = add(num, 56)
+wrt(hi)
+wrt(pi)
+wrt(pi16)
+
+
+# Testing loop
+for i = num to 10 {
+	wrt(i)
+	wrt(string)
+}
+
+var a = 10
+while a > 0 {
+	var a = a - 1
+
+	if a == 5 {
+		wrt("Beep")
+	}
+	elif a == 10 {
+		wrt("Boop")
+	}
+	else {
+		wrt(a)
+	}
+}
+
+# Testing built-In-functions
+wrt(type(num))
+wrt(type(str(num)))
+wrt(type(list))
+wrt(bin(100))
+wrt(abs(-1))
+wrt(sqrt(4))
+wrt(randomint(1, 100))
+
+
+
+
+
+
