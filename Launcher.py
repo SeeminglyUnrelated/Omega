@@ -11,7 +11,6 @@ try:
 
 	if error: print(error.as_string())
 	elif result: print(repr(result))
-	input("Press Enter to exit")
 except IndexError:
 	print("| {Omega 1.0.0} \n| On:  " + 
 	system() + " " + # Display OS
