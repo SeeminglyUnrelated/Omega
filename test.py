@@ -1,7 +1,5 @@
-import time
-print("1 sec wait:")
-time.sleep(1)
-print("Done!\n")
-print(".5 second wait: ")
-time.sleep(.5)
-print("Done!")
+import requests
+version = "1.0.0\n"
+web = requests.get("https://raw.githubusercontent.com/SeeminglyUnrelated/Omega/main/update.txt").text
+print(version == web)
+print(web)

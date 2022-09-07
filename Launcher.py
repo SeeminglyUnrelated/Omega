@@ -1,5 +1,13 @@
-import omega, time, sys
+import omega, time, sys, requests
+from tkinter import messagebox
 from platform import system, release, processor
+
+version = "1.0.0\n"
+
+
+web = requests.get("https://raw.githubusercontent.com/SeeminglyUnrelated/Omega/main/update.txt").text
+if web != version:
+	messagebox.showinfo("Update available!", "There is an update available!")
 
 # The st and et are here to calculate how much time an operation takes
 try:
