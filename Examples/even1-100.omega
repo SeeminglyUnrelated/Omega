@@ -3,4 +3,5 @@ for i = 0 to 100{
 		wrt(i)
 	}
 }
-
+input()
+# Print all even numbers from 1 to 100

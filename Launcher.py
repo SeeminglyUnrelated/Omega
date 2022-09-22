@@ -4,11 +4,6 @@ from platform import system, release, processor
 
 version = "1.0.0\n"
 
-
-web = requests.get("https://raw.githubusercontent.com/SeeminglyUnrelated/Omega/main/update.txt").text
-if web != version:
-	messagebox.showinfo("Update available!", "There is an update available!")
-
 # The st and et are here to calculate how much time an operation takes
 try:
 	with open(sys.argv[1]) as f:
@@ -20,6 +15,9 @@ try:
 	if error: print(error.as_string())
 	elif result: print(repr(result))
 except IndexError:
+	web = requests.get("https://raw.githubusercontent.com/SeeminglyUnrelated/Omega/main/update.txt").text
+	if web != version:
+		messagebox.showinfo("Update available!", "There is an update available!")
 	print("| {Omega 1.0.0} \n| On:  " + 
 	system() + " " + # Display OS
 	release() + #  Display Version
