@@ -26,7 +26,7 @@ except IndexError:
 	)
 
 	while True:
-		text = input('Omega > ') + "\n"
+		text = input("Omega >\n") 
 		if text.strip() == "": continue
 		if text == "exit()": break
 		elif text == "thicc" or text == "omega": 
